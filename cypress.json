@@ -6,8 +6,6 @@
         "reportingProjectKey": "DEF",
         "reportingRunEnvironment": "STAGE",
         "reportingRunBuild": "2.41.2.2431-SNAPSHOT",
-        "reportingRunDisplayName": "Zebrunner Demo Launch",
-        "reportingLoggingEnabled": false,
-        "reportingLoggingLevel": "debug"
+        "reportingRunDisplayName": "Zebrunner Demo Launch"
     }
 }
