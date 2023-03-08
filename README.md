@@ -1,5 +1,5 @@
 # Zebrunner Cypress reporting agent
 
-## sample-webdriverio
+## sample-cypress
 
 Your guide to run the first Cypress test with reporting to Zebrunner.
