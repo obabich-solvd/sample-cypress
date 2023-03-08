@@ -2,4 +2,4 @@
 
 ## sample-webdriverio
 
-Your guide to run the first WebdriverIO test with reporting to Zebrunner.
+Your guide to run the first Cypress test with reporting to Zebrunner.
