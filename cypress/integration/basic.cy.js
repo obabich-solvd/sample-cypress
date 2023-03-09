@@ -9,6 +9,6 @@ describe('Google search', () => {
     cy.xpath("//input[@name='q']").click().type(searchValue).type('{enter}');
 
     console.log(`Verify first search result contains search value`);
-    cy.xpath("//*[@id='search']//a").should('contain.text', searchValue);
+    cy.xpath("//*[@id='search']//a").should('contain.text', 'searchValue');
   });
 });
