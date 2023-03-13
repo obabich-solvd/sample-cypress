@@ -38,7 +38,7 @@ Define launch configuration (override defaults if needed) and copy content below
        "reportingProjectKey": "<project_key>",
        "reportingRunEnvironment": "DEMO",
        "reportingRunBuild": "2.41.2.2431-SNAPSHOT",
-       "reportingRunDisplayName": "Zebrunner Demo Launch(Cypress)"
+       "reportingRunDisplayName": "Zebrunner Demo Launch"
    }
 ```
 
