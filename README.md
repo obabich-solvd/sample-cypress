@@ -6,7 +6,7 @@ Your guide to run the first Cypress test with reporting to Zebrunner.
 
 ## Prerequisites
 
-Before you can start configuring Zebrunner Cypress reporting agent, you need to create a free Zebrunner workspace at https://zebrunner.com/
+Before configuring Zebrunner Cypress reporting agent, you need to create a free Zebrunner workspace at https://zebrunner.com/
 
 ## Configuration
 
@@ -27,11 +27,11 @@ In Zebrunner:
 - Click on "API Tokens" tab;
 - Press "Token" button, create a token and copy it before closing the dialog (you won't be able to see the token later).
 
-Define launch configuration (override defaults if needed) and copy content on the right to the list of reporters to the cypress.json file
+Define launch configuration (override defaults if needed) and copy content below to the list of reporters to the `cypress.json` file
 
 #### **`cypress.json`**
 
-```
+```js
 "reporterOptions": {
        "reportingServerHostname": "https://<workspace>.zebrunner.com/",
        "reportingServerAccessToken": "<accessToken>",
@@ -54,6 +54,7 @@ npm install && npx cypress run --headed --spec cypress/integration/basic.cy.js
 
 Congratulations! You have just completed reporting setup for a test project!
 Now you can go to the Launches page to see the results.
+
 Note: Video will be available only for tests launched via launcher!
 
 To learn more about advanced reporting capabilities, test cases mapping and more please go to the [documentation](https://zebrunner.com/documentation/reporting/cypress/).
