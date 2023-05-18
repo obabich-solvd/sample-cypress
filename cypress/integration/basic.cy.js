@@ -2,14 +2,16 @@ describe('Open page ', () => {
   const url = 'https://okr666.zebrunner.org/';
   const searchValue = 'Zebrunner';
 
-  it('Open constantly page', () => {
-    constantlyOpenUrlWithPause(url);
+  it('should perform an action in an infinite loop', () => {
+    Cypress.Promise.try(function loop() {
+      // Perform your desired action or assertions here
+      cy.visit(url);
+
+      // Delay for a specific duration
+      cy.wait(1000); // Wait for 1 second
+
+      // Call the loop function recursively
+      return loop();
+    });
   });
 });
-
-function constantlyOpenUrlWithPause(url) {
-  cy.visit(url).then(() => {
-    cy.wait(1000); // Pause for 1 second
-    constantlyOpenUrlWithPause(url); // Call the function recursively to continuously open the URL with a pause
-  });
-}
