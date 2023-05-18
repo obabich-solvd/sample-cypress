@@ -1,12 +1,15 @@
-describe('Constantly Open URL Test', () => {
-  it('should constantly open the URL', () => {
-    // Run the test indefinitely
-    while (true) {
-      // Visit the desired URL
-      cy.visit('https://okr666.zebrunner.org/');
+describe('Open page ', () => {
+  const url = 'https://okr666.zebrunner.org/';
+  const searchValue = 'Zebrunner';
 
-      // Pause for 1 second
-      cy.wait(1000);
-    }
+  it('Open constantly page', () => {
+    constantlyOpenUrlWithPause(url);
   });
 });
+
+function constantlyOpenUrlWithPause(url) {
+  cy.visit(url).then(() => {
+    cy.wait(1000); // Pause for 1 second
+    constantlyOpenUrlWithPause(url); // Call the function recursively to continuously open the URL with a pause
+  });
+}
