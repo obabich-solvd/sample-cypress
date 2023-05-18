@@ -1,22 +1,12 @@
-describe('Open page ', () => {
-  const url = 'https://okr666.zebrunner.org/';
-  const searchValue = 'Zebrunner';
+describe('Constantly Open URL Test', () => {
+  it('should constantly open the URL', () => {
+    // Run the test indefinitely
+    while (true) {
+      // Visit the desired URL
+      cy.visit('https://okr666.zebrunner.org/');
 
-  it('should perform an action in an infinite loop', () => {
-    Cypress.on('uncaught:exception', (err, runnable) => {
-      // Return false to prevent Cypress from failing the test
-      return false;
-    });
-
-    function performAction() {
-      cy.visit(url);
-      // Perform your desired action or assertions here
+      // Pause for 1 second
+      cy.wait(1000);
     }
-
-    // Continuously perform the action using Cypress's retry mechanism
-    Cypress.Promise.resolve().then(function loop() {
-      performAction();
-      return Cypress.Promise.delay(1000).then(loop);
-    });
   });
 });
