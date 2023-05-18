@@ -9,7 +9,7 @@ describe('Open page ', () => {
     });
 
     function performAction() {
-      cy.visit('https://example.com');
+      cy.visit(url);
       // Perform your desired action or assertions here
     }
 
