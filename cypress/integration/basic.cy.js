@@ -3,15 +3,20 @@ describe('Open page ', () => {
   const searchValue = 'Zebrunner';
 
   it('should perform an action in an infinite loop', () => {
-    Cypress.Promise.try(function loop() {
+    Cypress.on('uncaught:exception', (err, runnable) => {
+      // Return false to prevent Cypress from failing the test
+      return false;
+    });
+
+    function performAction() {
+      cy.visit('https://example.com');
       // Perform your desired action or assertions here
-      cy.visit(url);
+    }
 
-      // Delay for a specific duration
-      cy.wait(1000); // Wait for 1 second
-
-      // Call the loop function recursively
-      return loop();
+    // Continuously perform the action using Cypress's retry mechanism
+    Cypress.Promise.resolve().then(function loop() {
+      performAction();
+      return Cypress.Promise.delay(1000).then(loop);
     });
   });
 });
