@@ -6,8 +6,8 @@
     "test": "npx cypress run --headed --spec cypress/integration/basic.cy.js"
   },
   "dependencies": {
-    "@zebrunner/javascript-agent-cypress": "^1.0.43",
-    "cypress": "^9.7.0",
+    "@zebrunner/javascript-agent-cypress": "^1.1.0",
+    "cypress": "^12.13.0",
     "cypress-wait-until": "^1.7.2",
     "cypress-xpath": "^2.0.1",
     "standard": "^16.0.4"
