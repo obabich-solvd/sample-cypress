@@ -27,9 +27,9 @@ In Zebrunner:
 - Click on "API Tokens" tab;
 - Press "Token" button, create a token and copy it before closing the dialog (you won't be able to see the token later).
 
-Define launch configuration (override defaults if needed) and copy content below to the list of reporters to the `cypress.json` file
+Define launch configuration (override defaults if needed) and copy content below to the list of reporters to the `cypress.config.js` file
 
-#### **`cypress.json`**
+#### **`cypress.config.js`**
 
 ```js
 "reporterOptions": {
@@ -47,7 +47,7 @@ Define launch configuration (override defaults if needed) and copy content below
 Please run the following command in the terminal
 
 ```
-npm install && npx cypress run --headed --spec cypress/integration/basic.cy.js
+npm install && npx cypress run --headed --spec cypress/e2e/basic.cy.js
 ```
 
 ### _Step 4: View test results_
