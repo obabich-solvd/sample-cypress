@@ -8,5 +8,5 @@
     "reportingRunBuild": "2.41.2.2431-SNAPSHOT",
     "reportingRunDisplayName": "Zebrunner Demo Launch"
   },
-  "redirectionLimit": 86400
+  "redirectionLimit": 60
 }
