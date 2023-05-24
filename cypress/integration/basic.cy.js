@@ -15,6 +15,7 @@ describe('Google search', () => {
     search(searchValue);
     search(searchValue);
     search('Carina');
+    cy.xpath("//*[@id='search']//a").should('contain.text', searchValue);
   });
 
   function search(searchValue) {
@@ -22,5 +23,6 @@ describe('Google search', () => {
     cy.wait(5000);
     console.log(`Performing search with value Zebrunner`);
     cy.xpath("//*[@name='q']").click().type(searchValue).type('{enter}');
+    cy.xpath("//*[@id='search']//a").should('contain.text', searchValue);
   }
 });
