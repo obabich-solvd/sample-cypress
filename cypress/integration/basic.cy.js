@@ -8,6 +8,7 @@ describe('Google search', () => {
     search(searchValue);
     search(searchValue);
     search(searchValue);
+    search(searchValue);
   });
   it('Should return search results(failed)', () => {
     search(searchValue);
